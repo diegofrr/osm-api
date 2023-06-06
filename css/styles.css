@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    font-size: 16px;
 }
 
 #bg-img {
@@ -25,17 +26,19 @@ body {
 
 .input-container input {
     border-radius: 40px;
+    font-size: 1rem;
 }
 
 .input-container input::placeholder {
     font-style: italic;
     opacity: 70%;
-    font-size: 14px;
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 32px;
     width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 #map {
@@ -76,8 +79,16 @@ h1 {
     background-color: #e6e6e6;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     h1 {
-        font-size: 18px;
+        font-size: 20px;
+    }
+
+    .input-container input {
+        height: 42px;
+    }
+
+    body {
+        padding: 20px;
     }
 }
