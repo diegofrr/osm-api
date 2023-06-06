@@ -71,6 +71,7 @@ function displaySuggestions(suggestions) {
 
             const item = [
                 suggestion.address.waterway,
+                suggestion.address.building,
                 suggestion.address.office,
                 suggestion.address.natural,
                 suggestion.address.hamlet,
