@@ -70,6 +70,8 @@ function displaySuggestions(suggestions) {
             var suggestionItem = document.createElement('div');
 
             const item = [
+                suggestion.address.waterway,
+                suggestion.address.natural,
                 suggestion.address.hamlet,
                 suggestion.address.neighbourhood,
                 suggestion.address.commercial,
@@ -80,10 +82,14 @@ function displaySuggestions(suggestions) {
                 suggestion.address.amenity,
                 suggestion.address.road,
                 suggestion.address.suburb,
-                suggestion.address.town,
-                suggestion.address.city,
-                suggestion.address.city_district,
-                suggestion.address.state,
+
+                suggestion.address.town
+                || suggestion.address.city
+                || suggestion.address.city_district,
+
+                suggestion.address.state
+                || suggestion.address.state_district,
+
                 suggestion.address.country,
                 suggestion.address.postcode
             ].filter(i => i).join(', ');
