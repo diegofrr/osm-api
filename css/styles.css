@@ -8,6 +8,7 @@ body {
     height: 100vh;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
 }
 
 #bg-img {
