@@ -70,6 +70,7 @@ function displaySuggestions(suggestions) {
             var suggestionItem = document.createElement('div');
 
             const item = [
+                suggestion.address.village,
                 suggestion.address.landuse,
                 suggestion.address.leisure,
                 suggestion.address.shop,
