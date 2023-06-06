@@ -88,10 +88,17 @@ function displaySuggestions(suggestions) {
 
             suggestionItem.textContent = item;
             suggestionItem.classList.add('suggestion-item');
+
+            if (suggestion.result.icon) {
+                const image = `<img src="${suggestion.result.icon}" />`
+                suggestionItem.innerHTML = image + suggestionItem.innerHTML;
+            }
+
             suggestionItem.addEventListener('click', function () {
                 var coordinates = [suggestion.lat, suggestion.lon];
                 console.log(suggestion.result)
             });
+
             suggestionsContainer.appendChild(suggestionItem);
         });
     } else {
